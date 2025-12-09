@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
 export default function Login() {
   const navigate = useNavigate();
+
+  if (auth.currentUser) {
+    return <Navigate to="/board" replace />;
+  }
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
