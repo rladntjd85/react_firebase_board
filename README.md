@@ -72,7 +72,7 @@ Infra / Tools
 Firebase Hosting
 VSCode · Git · GitHub
 
-⚙ 전체 구조
+-전체 구조
 
 Client (React)
 ↓
